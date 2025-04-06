@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Lógica para registrar a hora (exemplo, você pode personalizar conforme a necessidade)
                 TextView timeTextView = findViewById(R.id.timeTextView);
+                timeTextView.setVisibility(View.VISIBLE);
                 Calendar calendar = Calendar.getInstance();
                 String time = String.format("%02d:%02d:%02d", calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND));
                 timeTextView.setText("Hora registrada: " + time);
@@ -55,11 +56,12 @@ public class HomeActivity extends AppCompatActivity {
 
     // Método para preencher as informações do usuário nos campos de texto
     public void setText(Login user, TextView matriculaText, TextView departmentText, TextView nameText, TextView funcionText) {
-        matriculaText.setText(user.getMatricula());
-        departmentText.setText(user.getDepartment().getName());
-        nameText.setText(user.getName());
-        funcionText.setText(user.getFunction().getName());
+        matriculaText.setText("Matrícula: " + user.getMatricula());
+        departmentText.setText("Departamento: " + user.getDepartment().getName());
+        nameText.setText("Nome Completo: " + user.getName());
+        funcionText.setText("Função: " + user.getFunction().getName());
     }
+
 
     // Método para criar os campos dinamicamente conforme a hora atual
     public void createDynamicFields(Calendar calendar) {

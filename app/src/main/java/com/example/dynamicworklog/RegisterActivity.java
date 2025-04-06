@@ -41,12 +41,12 @@ public class RegisterActivity extends AppCompatActivity {
         Spinner functionSpinner = (Spinner) findViewById(R.id.functionSpinner);
         EditText passwordRegister = (EditText) findViewById(R.id.passwordRegister);
         TextView matriculaText = (TextView) findViewById(R.id.matriculaText);
-
+        TextView matriculaRegistro = (TextView) findViewById(R.id.matriculaRegis);
         Button registerButton = (Button) findViewById(R.id.registerButton);
         Button backHome = (Button) findViewById(R.id.backHome);
 
 
-        String[] departments = {"Recursos Humanos", "Financeiro", "Desenvedor", "Marketing"};
+        String[] departments = {"Recursos Humanos", "Financeiro", "Desenvolvedor", "Marketing"};
         // Funções/Cargos por Departamento
         String[] functions = {
                 // Recursos Humanos
@@ -133,6 +133,7 @@ public class RegisterActivity extends AppCompatActivity {
                 //mainActivity();
                 matriculaText.setText(users.matriculaLastUser());
                 matriculaText.setVisibility(VISIBLE);
+                matriculaRegistro.setVisibility(VISIBLE);
                 registerButton.setVisibility(INVISIBLE);
             }
         });

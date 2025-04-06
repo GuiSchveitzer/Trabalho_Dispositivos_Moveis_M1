@@ -23,6 +23,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horário"
+            android:visibility="invisible"
+            android:textSize="18sp"/>
+
+        <TextView
             android:id="@+id/matriculaText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,6 +57,7 @@
             android:layout_height="wrap_content"
             android:text="Função"
             android:textSize="18sp" />
+
     </LinearLayout>
 
     <android.widget.ScrollView
@@ -82,13 +91,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/timeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="138dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
