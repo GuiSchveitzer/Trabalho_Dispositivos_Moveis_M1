@@ -83,6 +83,17 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/filledCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atividades preenchidas: 0"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/registerTimeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- Botão para registrar hora -->
     <Button
         android:id="@+id/registerTimeButton"
